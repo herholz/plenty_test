@@ -51,6 +51,6 @@ class ContentControllerNew extends Controller
             'currentItems' => $items
         );
  
-        return $twig->render('HelloWorld::content.TopItems', $templateData);
+        return $twig->render('HelloWorld::content.test', $templateData);
     }
 }
