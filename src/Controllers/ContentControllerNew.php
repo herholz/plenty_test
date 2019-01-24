@@ -46,8 +46,8 @@ class ContentControllerNew extends Controller
         $items = array();
         foreach ($resultItems as $item)
         {
-            $img = $imageRepository->show($item['variationImageList']['imageId']);
-            $item["url"] = $img["url"];
+            //$img = $imageRepository->show($item['variationImageList']['imageId']);
+            //$item->url = $img.url
             $items[] = $item;
 
         }
