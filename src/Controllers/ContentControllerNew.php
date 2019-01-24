@@ -6,10 +6,11 @@ namespace HelloWorld\Controllers;
 use Plenty\Plugin\Controller;
 use Plenty\Plugin\Templates\Twig;
 use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
+use Plenty\Modules\Item\ItemImage\Contracts\ItemImageRepositoryContract;
  
 class ContentControllerNew extends Controller
 {
-    public function showTopItems(Twig $twig, ItemDataLayerRepositoryContract $itemRepository):string
+    public function showTopItems(Twig $twig, ItemDataLayerRepositoryContract $itemRepository, ItemImageRepositoryContract $imageRepository):string
     {
         $itemColumns = [
             'itemDescription' => [
@@ -24,7 +25,8 @@ class ContentControllerNew extends Controller
             ],
             'variationImageList' => [
                 'path',
-                'cleanImageName'
+                'cleanImageName',
+                'imageId'
             ]
         ];
  
@@ -44,7 +46,10 @@ class ContentControllerNew extends Controller
         $items = array();
         foreach ($resultItems as $item)
         {
+            $img = $imageRepository->show($item['variationImageList']['imageId']);
+            $item["url"] = $img["url"];
             $items[] = $item;
+
         }
         $templateData = array(
             'resultCount' => $resultItems->count(),
