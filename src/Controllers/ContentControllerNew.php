@@ -57,7 +57,6 @@ class ContentControllerNew extends Controller
         $templateData = array(
             'resultCount' => $resultItems->count(),
             'currentItems' => $items
-           // 'images' => $images
         );
  
         return $twig->render('HelloWorld::content.test', $templateData);
