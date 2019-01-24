@@ -51,7 +51,7 @@ class ContentControllerNew extends Controller
             $img = $imageRepository->show($item['variationImageList']['imageId']);
             //$item->url = $img.url
             $items[] = $item;
-            $images[] = $img
+            $images[] = $img;
 
         }
         $templateData = array(
