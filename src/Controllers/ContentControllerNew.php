@@ -48,16 +48,16 @@ class ContentControllerNew extends Controller
         foreach ($resultItems as $item)
         {
             //$img = $imageRepository->show($item['variationImageList']['imageId']);
-            $img = $imageRepository->show($item['variationImageList']['imageId']);
+            //$img = $imageRepository->show($item['variationImageList']['imageId']);
             //$item->url = $img.url
             $items[] = $item;
-            $images[] = $img;
+            //$images[] = $img;
 
         }
         $templateData = array(
             'resultCount' => $resultItems->count(),
-            'currentItems' => $items,
-            'images' => $images
+            'currentItems' => $items
+           // 'images' => $images
         );
  
         return $twig->render('HelloWorld::content.test', $templateData);
