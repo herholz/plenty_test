@@ -26,8 +26,7 @@ class ContentControllerNew extends Controller
             'variationImageList' => [
                 'path',
                 'cleanImageName',
-                'imageId',
-                'url'
+                'imageId'
             ]
         ];
  
@@ -45,16 +44,20 @@ class ContentControllerNew extends Controller
             ->search($itemColumns, $itemFilter, $itemParams);
  
         $items = array();
+        $images = array();
         foreach ($resultItems as $item)
         {
             //$img = $imageRepository->show($item['variationImageList']['imageId']);
+            $img = $imageRepository->show($item['variationImageList']['imageId']);
             //$item->url = $img.url
             $items[] = $item;
+            $images[] = $img
 
         }
         $templateData = array(
             'resultCount' => $resultItems->count(),
-            'currentItems' => $items
+            'currentItems' => $items,
+            'images' => $images
         );
  
         return $twig->render('HelloWorld::content.test', $templateData);
