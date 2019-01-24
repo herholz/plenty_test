@@ -26,7 +26,8 @@ class ContentControllerNew extends Controller
             'variationImageList' => [
                 'path',
                 'cleanImageName',
-                'imageId'
+                'imageId',
+                'url'
             ]
         ];
  
