@@ -8,7 +8,7 @@
             {% for item in currentItems %}
                 <li class="card" style="width: 280px">
                     <div class="card-block">
-                        <h4 class="card-title">{{ item.itemDescription.name1 }} {{item.url}}</h4>
+                        <h4 class="card-title">{{ item.itemDescription.name1 }}</h4>
                         <h6 class="card-subtitle text-muted">ID: {{ item.variationBase.id }}</h6>
                     </div>
                     {% set image = item.variationImageList | first %}
@@ -28,7 +28,7 @@
     </ul>
     </div>
     {% for img in images %}
-        <img src="{{img.url}}" />
+        <p>{{ img.url }}</p>
     {% endfor %}
 
 {% endblock %}
