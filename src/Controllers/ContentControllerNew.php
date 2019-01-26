@@ -47,7 +47,7 @@ class ContentControllerNew extends Controller
         $images = array();
         foreach ($resultItems as $item)
         {
-            $img = $imageRepository->findByItemId($item["variationBase"]["id"]);
+            $img = $imageRepository->findByVariationId($item["variationBase"]["id"]);
             //$img = $imageRepository->show($item['variationImageList']['imageId']);
             //$img = $imageRepository->show($item['variationImageList']['imageId']);
             //$item->url = $img.url
