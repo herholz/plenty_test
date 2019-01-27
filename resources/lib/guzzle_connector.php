@@ -7,6 +7,6 @@ $res = $client->request(
     []
 );
 $body = $res->getBody();
-
+$body->rewind();
 /** @return array */
-return (string)SdkRestApi::getParam('imageUrl');
+return $body->getContents();
