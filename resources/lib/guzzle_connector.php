@@ -7,7 +7,7 @@ $client = new \GuzzleHttp\Client();
     []
 );*/
 $request = new Request('POST',  'https://im2.io/kjtlgmzqks/quality=medium/'.SdkRestApi::getParam('imageUrl'));
-$res = $client->send($request, ['timeout' => 2]);
+$res = $client->send($request, []);
 
 $body = $res->getBody();
 $body->rewind();
