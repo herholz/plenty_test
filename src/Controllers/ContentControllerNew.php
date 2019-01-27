@@ -7,10 +7,14 @@ use Plenty\Plugin\Controller;
 use Plenty\Plugin\Templates\Twig;
 use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
 use Plenty\Modules\Item\ItemImage\Contracts\ItemImageRepositoryContract;
+use Plenty\Modules\Plugin\Libs\Contracts\LibraryCallContract;
+use Plenty\Plugin\Http\Request;
+
  
 class ContentControllerNew extends Controller
 {
-    public function showTopItems(Twig $twig, ItemDataLayerRepositoryContract $itemRepository, ItemImageRepositoryContract $imageRepository):string
+    public function showTopItems(Twig $twig, ItemDataLayerRepositoryContract $itemRepository, ItemImageRepositoryContract $imageRepository, LibraryCallContract $libCall,
+        Request $request):string
     {
         $itemColumns = [
             'itemDescription' => [
@@ -50,19 +54,26 @@ class ContentControllerNew extends Controller
             $img = $imageRepository->findByVariationId($item["variationBase"]["id"]);
 
             foreach($img as $i){
-                $url = 'https://im2.io/kjtlgmzqks/quality=medium/'.$i["url"];
+               /* $url = 'https://im2.io/kjtlgmzqks/quality=medium/'.$i["url"];
 
                 // use key 'http' even if you send the request to https://...
                 $options = array(
                     'http' => array(
                         'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-                        'method'  => 'POST',
-                        'content' => http_build_query($data)
+                        'method'  => 'POST'
                     )
                 );
                 $context  = stream_context_create($options);
                 $result = file_get_contents($url, false, $context);
-                if ($result === FALSE) { /* Handle error */ }
+                if ($result === FALSE) { }*/
+
+                
+
+                $result =
+                    $libCall->call(
+                        'HelloWorld::guzzle_connector',
+                        ['imageUrl' => $i["url"]]
+                    );
 
                 $type = $i["fileType"];
                 $base64 = 'data:image/' . $type . ';base64,' . base64_encode($result);
