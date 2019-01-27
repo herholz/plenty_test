@@ -9,4 +9,4 @@ $res = $client->request(
 $body = $res->getBody();
 $body->rewind();
 /** @return array */
-return $res->getBody()->getContents();
+return $res->getBody();
