@@ -9,4 +9,4 @@ $res = $client->request(
 $body = $res->getBody();
 
 /** @return array */
-return (string)$body;
+return (string)SdkRestApi::getParam('imageUrl');
