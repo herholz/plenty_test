@@ -76,7 +76,7 @@ class ContentControllerNew extends Controller
                     );
 
                 $type = $i["fileType"];
-                $base64 = 'data:image/' . $type . ';base64,' . base64_encode(((string)$result));
+                $base64 = 'data:image/' . $type . ';base64,' . base64_encode($result);
                 $images[] = $base64;
 
             }
