@@ -6,6 +6,8 @@ $res = $client->request(
     'https://im2.io/kjtlgmzqks/quality=medium/'.SdkRestApi::getParam('imageUrl'),
     []
 );
- 
+$body = $res->getBody();
+$body->rewind();
+
 /** @return array */
-return $res->getBody();
+return $body->getContents();
