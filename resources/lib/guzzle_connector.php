@@ -10,4 +10,4 @@ $body = $res->getBody();
 $body->rewind();
 
 /** @return array */
-return $body->getContents();
+return $body[0]
