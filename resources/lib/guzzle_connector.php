@@ -8,4 +8,4 @@ $res = $client->request(
 );
  
 /** @return array */
-return $res->getBody()->getContents();
+return $res->getBody();
