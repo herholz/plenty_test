@@ -5,7 +5,7 @@ $client = new \GuzzleHttp\Client();
     'https://im2.io/kjtlgmzqks/quality=medium/'.SdkRestApi::getParam('imageUrl'),
     []
 );*/
-$request = new \GuzzleHttp\Request('POST',  'https://im2.io/kjtlgmzqks/quality=medium/'.SdkRestApi::getParam('imageUrl'));
+$request = new \GuzzleHttp\Psr7\Request('POST',  'https://im2.io/kjtlgmzqks/quality=medium/'.SdkRestApi::getParam('imageUrl'));
 $res = $client->send($request, []);
 
 $body = $res->getBody();
