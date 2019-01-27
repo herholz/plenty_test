@@ -7,7 +7,6 @@ $res = $client->request(
     []
 );
 $body = $res->getBody();
-$body->rewind();
 
 /** @return array */
-return $body[0]
+return (string)$body;
