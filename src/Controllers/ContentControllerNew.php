@@ -18,7 +18,6 @@ class ContentControllerNew extends Controller
 
     public function showPivot(Twig $twig, OrderRepositoryContract $orderRepository):string
     {
-        $result;
         $filters = ["outgoingItemsBookedAtFrom" => "2019-01-01T00:00:00+00:00", "outgoingItemsBookedAtTo" => "2019-01-31T00:00:00+00:00", "statusFrom" => 7.4, "statusTo" => 7.4, "warehouseId" => 1];
 
         $orderRepository->setFilters($filters);
