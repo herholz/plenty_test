@@ -1,0 +1,12 @@
+{
+	"defaultEntryPoint": "ui/index.html",
+	"namespace": "HelloWorld",
+	"menuEntries": [
+		{
+			"label": "Pivot",
+			"menu": "system/start",
+			"urlKey": "hello-world",
+			"entryPoint": "index.html"
+		}
+	]
+}

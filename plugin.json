@@ -2,10 +2,7 @@
       "name":"HelloWorld",
       "description":"My first plugin",
       "namespace":"HelloWorld",
-      "author":"Christian Moll",
-      "type":"template",
+      "author":"Patrick Herholz",
+      "type":"backend",
       "serviceProvider":"HelloWorld\\Providers\\HelloWorldServiceProvider",
-      "dependencies": {
-        "guzzlehttp/guzzle": "6.2.*"
-    }
 }
