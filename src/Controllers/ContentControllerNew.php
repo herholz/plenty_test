@@ -10,6 +10,7 @@ use Plenty\Modules\Item\ItemImage\Contracts\ItemImageRepositoryContract;
 use Plenty\Modules\Plugin\Libs\Contracts\LibraryCallContract;
 use Plenty\Plugin\Http\Request;
 use Plenty\Modules\Order\Contracts\OrderRepositoryContract;
+use Plenty\Repositories\Models\PaginatedResult;
 
  
 class ContentControllerNew extends Controller
@@ -25,7 +26,7 @@ class ContentControllerNew extends Controller
         $result = $orderRepository->searchOrders(1, 100, ["orderItems.variation"]);
 
         $templateData = array(
-            'resultCount' => $result->count(),
+            'resultCount' => $result->getTotalCount(),
             'item1' => $result
         );
  
