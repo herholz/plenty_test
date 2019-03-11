@@ -4,7 +4,7 @@
 	"menuEntries": [
 		{
 			"label": "Pivot",
-			"menu": "system/settings",
+			"menu": "system/order",
 			"urlKey": "pivot-plugin",
 			"entryPoint": "index.html"
 		}
