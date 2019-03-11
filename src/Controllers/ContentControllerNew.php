@@ -1,6 +1,6 @@
 <?php
  
-namespace HelloWorld\Controllers;
+namespace PivotPlugin\Controllers;
  
  
 use Plenty\Plugin\Controller;

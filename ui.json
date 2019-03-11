@@ -1,11 +1,11 @@
 {
 	"defaultEntryPoint": "ui/index.html",
-	"namespace": "HelloWorld",
+	"namespace": "PivotPlugin",
 	"menuEntries": [
 		{
 			"label": "Pivot",
 			"menu": "system/settings",
-			"urlKey": "hello-world",
+			"urlKey": "pivot-plugin",
 			"entryPoint": "index.html"
 		}
 	]

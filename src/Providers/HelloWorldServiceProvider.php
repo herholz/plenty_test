@@ -1,5 +1,5 @@
 <?php
-namespace HelloWorld\Providers;
+namespace PivotPlugin\Providers;
 
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Modules\Item\Item\Models;

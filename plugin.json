@@ -1,8 +1,9 @@
 {
-      "name":"HelloWorld",
+      "name":"PivotPlugin",
       "description":"My first plugin",
-      "namespace":"HelloWorld",
+      "namespace":"PivotPlugin",
       "author":"Patrick Herholz",
       "type":"backend",
-      "serviceProvider":"HelloWorld\\Providers\\HelloWorldServiceProvider",
+      "serviceProvider":"PivotPlugin\\Providers\\HelloWorldServiceProvider",
+      "version": "0.0.1"
 }

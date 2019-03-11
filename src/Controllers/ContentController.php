@@ -1,12 +1,12 @@
 <?php
-namespace HelloWorld\Controllers;
+namespace PivotPlugin\Controllers;
 
 use Plenty\Plugin\Controller;
 use Plenty\Plugin\Templates\Twig;
 
 /**
  * Class ContentController
- * @package HelloWorld\Controllers
+ * @package PivotPlugin\Controllers
  */
 class ContentController extends Controller
 {
@@ -16,6 +16,6 @@ class ContentController extends Controller
 	 */
 	public function sayHello(Twig $twig):string
 	{
-		return $twig->render('HelloWorld::content.hello');
+		return $twig->render('PivotPlugin::content.hello');
 	}
 }
