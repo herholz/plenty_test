@@ -4,7 +4,7 @@
 	"menuEntries": [
 		{
 			"label": "Pivot",
-			"menu": "system/start",
+			"menu": "system/settings",
 			"urlKey": "hello-world",
 			"entryPoint": "index.html"
 		}
