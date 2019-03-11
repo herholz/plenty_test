@@ -8,7 +8,7 @@ use Plenty\Modules\Item\Item\Models;
 
 /**
  * Class HelloWorldServiceProvider
- * @package HelloWorld\Providers
+ * @package PivotPlugin\Providers
  */
 class HelloWorldServiceProvider extends ServiceProvider
 {
