@@ -20,14 +20,14 @@ class ContentControllerNew extends Controller
         $filters = ["outgoingItemsBookedAtFrom" => "2019-01-01T00:00:00+00:00", "outgoingItemsBookedAtTo" => "2019-01-31T00:00:00+00:00", "statusFrom" => 7.4, "statusTo" => 7.4, "warehouseId" => 1];
 
         $orderRepository->setFilters($filters);
-        $resultItems = searchOrders(1, 100, ["orderItems.variation"]);
+        $resultItems = $orderRepository->searchOrders(1, 100, ["orderItems.variation"]);
 
         $templateData = array(
             'resultCount' => $resultItems->count(),
             'item1' => $resultItems[0]
         );
  
-        return $twig->render('HelloWorld::content.pivot', $templateData);
+        return $twig->render('PivotPlugin::content.pivot', $templateData);
     }
 
     public function showTopItems(Twig $twig, ItemDataLayerRepositoryContract $itemRepository, ItemImageRepositoryContract $imageRepository, LibraryCallContract $libCall,
