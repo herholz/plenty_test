@@ -16,8 +16,9 @@ class HelloWorldRouteServiceProvider extends RouteServiceProvider
 	public function map(Router $router)
 	{
 		$router->get('hello', 'HelloWorld\Controllers\ContentController@sayHello');
-
         $router->get('test', 'HelloWorld\Controllers\ContentControllerNew@showTopItems');
+        $router->get('pivot', 'HelloWorld\Controllers\ContentControllerNew@showPivot');
+
    
 	}
 
