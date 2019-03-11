@@ -6,7 +6,7 @@
 			"label": "Pivot",
 			"menu": "system/order",
 			"urlKey": "pivot-plugin",
-			"entryPoint": "PivotPlugin\Controllers\ContentControllerNew@showPivot"
+			"entryPoint": "index.html"
 		}
 	]
 }
